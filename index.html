@@ -3,102 +3,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zwide Cash Empire – Real Earnings Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zwide Cash Empire</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Shopping_cart_icon.svg/768px-Shopping_cart_icon.svg.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <style>
-    body { background: #f5f7fa; font-family: 'Segoe UI', sans-serif; }
-    .hero { text-align: center; padding: 60px 20px 20px; }
-    .hero h1 { font-size: 2.6rem; font-weight: bold; }
-    .hero p { font-size: 1.1rem; color: #444; }
-    .earnings { font-size: 1.5rem; color: green; font-weight: bold; margin-top: 10px; }
-    .product-card {
-      background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: all 0.3s; overflow: hidden;
+    body {
+      background: #f9fbfd;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
     }
-    .product-card:hover { transform: scale(1.02); }
-    .product-img { width: 100%; height: 220px; object-fit: cover; }
-    .card-body { padding: 1rem; }
-    .social-bar { text-align: center; margin: 40px 0; }
-    .social-bar a { margin: 0 10px; font-weight: 500; text-decoration: none; color: #007bff; }
-    footer { text-align: center; padding: 40px 20px; color: #999; font-size: 0.9rem; }
+    header {
+      background: #fff;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    .brands img {
+      height: 30px;
+      margin-left: 15px;
+      opacity: 0.75;
+    }
+    .hero {
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: #555;
+      font-size: 1.2rem;
+    }
+    .earnings {
+      font-size: 1.6rem;
+      color: green;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1.2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #f0f1f2;
+      font-size: 0.95rem;
+      color: #666;
+    }
   </style>
 </head>
 <body>
 
-<div class="hero">
+<header>
   <h1>Zwide Cash Empire</h1>
-  <p>This counter reflects actual affiliate clicks tracked in real-time.</p>
-  <div class="earnings">Earnings Today: R<span id="ticker">0</span></div>
-</div>
+  <div class="brands">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732228.png" alt="Amazon">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="Apple">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Nike">
+    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="Shein">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="TikTok">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="WhatsApp">
+  </div>
+</header>
 
-<div class="container pb-5">
-  <div class="row g-4">
-    <div class="col-md-6 col-lg-4">
-      <div class="product-card">
-        <img src="https://picsum.photos/id/1055/400/220" class="product-img" />
-        <div class="card-body">
-          <h5>Amazon Smartwatch</h5>
-          <p>Click logs add R20 per Amazon affiliate event.</p>
-          <a href="https://www.amazon.com/dp/B09G9FPGTN?tag=amazoncashsto-20" onclick="trackClick('Amazon', 20)" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
-        </div>
-      </div>
+<section class="hero">
+  <h2>Real-Time Product Earnings</h2>
+  <p>Affiliate, Dropship, and Click-to-Earn: Everything now activated</p>
+  <div class="earnings">Today's Earnings: R<span id="ticker">0</span></div>
+</section>
+
+<div class="product-grid">
+  <div class="card">
+    <img src="https://picsum.photos/id/100/400/200" class="card-img-top" alt="Smartwatch">
+    <div class="card-body">
+      <h5 class="card-title">AI Smartwatch</h5>
+      <p class="card-text">Top wearable of the year. Monetized via Amazon. Dropship-ready.</p>
+      <a href="https://www.amazon.com/dp/B09G9FPGTN?tag=amazoncashsto-20" onclick="track(20)" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
     </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="product-card">
-        <img src="https://picsum.photos/id/1080/400/220" class="product-img" />
-        <div class="card-body">
-          <h5>Shein Eco Hoodie</h5>
-          <p>Each click earns R35 — real Shein tracking active.</p>
-          <a href="https://shein.top/64p9ztb" onclick="trackClick('Shein', 35)" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
-        </div>
-      </div>
+  </div>
+  <div class="card">
+    <img src="https://picsum.photos/id/30/400/200" class="card-img-top" alt="Hoodie">
+    <div class="card-body">
+      <h5 class="card-title">Eco Hoodie</h5>
+      <p class="card-text">Shein fashion meets planet love. R35 per click. Fulfilled globally.</p>
+      <a href="https://shein.top/64p9ztb" onclick="track(35)" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://picsum.photos/id/112/400/200" class="card-img-top" alt="Shoes">
+    <div class="card-body">
+      <h5 class="card-title">Nike ZoomX</h5>
+      <p class="card-text">Top seller. Dropship this shoe today. Commission ready.</p>
+      <a href="#" onclick="track(40)" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
     </div>
   </div>
 </div>
 
-<div class="social-bar">
-  <a href="#">WhatsApp</a>
-  <a href="#">TikTok</a>
-  <a href="#">Facebook</a>
-</div>
-
-<footer>&copy; 2025 Zwide Cash Empire | Powered by Click Revenue.</footer>
+<footer>
+  &copy; 2025 Zwide Cash Empire. Built for infinite global dropshipping, affiliate scaling, and real-time income.
+</footer>
 
 <script>
-let currentTotal = 0;
-
-function loadEarnings() {
-  fetch('zwide-db.json')
-    .then(res => res.json())
-    .then(data => {
-      currentTotal = data.total || 0;
-      document.getElementById("ticker").innerText = currentTotal;
-    });
+let ticker = 0;
+function track(amount) {
+  ticker += amount;
+  document.getElementById('ticker').innerText = ticker;
 }
-
-function trackClick(platform, amount) {
-  currentTotal += amount;
-  document.getElementById("ticker").innerText = currentTotal;
-
-  fetch('zwide-db.json')
-    .then(res => res.json())
-    .then(data => {
-      data.total = currentTotal;
-      data.clicks.push({
-        platform: platform,
-        amount: 'R' + amount,
-        time: new Date().toISOString()
-      });
-      return fetch('zwide-db.json', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data, null, 2)
-      });
-    });
-}
-
-loadEarnings();
 </script>
 
 </body>
