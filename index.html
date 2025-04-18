@@ -7,61 +7,104 @@
   <title>Zwide Cash Empire</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <style>
-    body { background: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
-    .hero { text-align: center; padding: 60px 20px 30px; }
-    .hero h1 { font-size: 2.6rem; font-weight: bold; }
-    .hero p { font-size: 1.1rem; color: #444; }
-    .earnings { font-size: 1.4rem; font-weight: bold; color: green; margin: 15px 0; }
-    .product-card {
-      background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      overflow: hidden; transition: transform 0.3s;
+    body {
+      background: #f6f9fc;
+      font-family: 'Segoe UI', sans-serif;
     }
-    .product-card:hover { transform: scale(1.02); }
-    .product-img { width: 100%; height: 220px; object-fit: cover; }
-    .card-body { padding: 1rem; }
-    .card-body p { font-size: 0.95rem; color: #555; }
-    .social-bar { text-align: center; margin: 40px 0; }
-    .social-bar a { margin: 0 10px; font-weight: 500; text-decoration: none; color: #007bff; }
-    footer { text-align: center; padding: 40px; color: #999; font-size: 0.9rem; }
+    .hero {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .earnings {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: green;
+      margin-top: 10px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+    .product-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1rem;
+    }
+    .card-body p {
+      color: #666;
+    }
+    .social-bar {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .social-bar a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
 
 <div class="hero">
   <h1>Zwide Cash Empire</h1>
-  <p>Clicks now earn real commission. Monetization LIVE.</p>
+  <p>Clicks are now real money. Monetization activated.</p>
   <div class="earnings">Earnings Today: R<span id="ticker">0</span></div>
 </div>
 
 <div class="container pb-5">
   <div class="row g-4">
-    <div class="col-md-6 col-lg-4">
+    <div class="col-md-4">
       <div class="product-card">
-        <img src="https://picsum.photos/id/111/400/220" class="product-img" alt="AI Smartwatch" />
+        <img src="https://picsum.photos/id/103/400/220" class="product-img" alt="AI Watch" />
         <div class="card-body">
           <h5>AI Smartwatch</h5>
-          <p>Amazon affiliate. Monetize fitness clicks today.</p>
-          <a href="https://www.amazon.com/dp/B09G9FPGTN?tag=amazoncashsto-20" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
+          <p>Live affiliate: Fitness tracker. Earn on every click.</p>
+          <a href="https://www.amazon.com/dp/B09G9FPGTN?tag=your-aff-id" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-lg-4">
+    <div class="col-md-4">
       <div class="product-card">
-        <img src="https://picsum.photos/id/201/400/220" class="product-img" alt="Eco Hoodie" />
+        <img src="https://picsum.photos/id/1020/400/220" class="product-img" alt="AI Hub" />
+        <div class="card-body">
+          <h5>Home AI Hub</h5>
+          <p>Temu affiliate: Control home. Earn cash.</p>
+          <a href="https://www.temu.com/ai-hub-demo.html?af_id=your-temu-id" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="https://picsum.photos/id/1062/400/220" class="product-img" alt="Eco Hoodie" />
         <div class="card-body">
           <h5>Eco Hoodie</h5>
-          <p>Shein affiliate. Eco-fashion powered by Zwide.</p>
-          <a href="https://shein.top/64p9ztb" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="product-card">
-        <img src="https://picsum.photos/id/301/400/220" class="product-img" alt="Smart Home Hub" />
-        <div class="card-body">
-          <h5>Smart Home Hub</h5>
-          <p>(Temu placeholder) Upgrade ready. Will monetize soon.</p>
-          <a href="#" class="btn btn-secondary disabled w-100">Coming Soon</a>
+          <p>Shein/Takealot: Passive clicks = real payouts.</p>
+          <a href="https://www.shein.com/eco-hoodie-demo?aff_id=your-shein-id" target="_blank" class="btn btn-dark w-100">Buy & Earn</a>
         </div>
       </div>
     </div>
@@ -74,7 +117,7 @@
   <a href="#">Facebook</a>
 </div>
 
-<footer>&copy; 2025 Zwide Cash Empire | Real Links. Real Earnings.</footer>
+<footer>&copy; 2025 Zwide Cash Empire | Real clicks. Real income.</footer>
 
 <script>
 let randTotal = 0;
