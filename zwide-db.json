@@ -1,20 +1,7 @@
 {
-  "clicks": [
-    {
-      "product": "AI Smartwatch",
-      "location": "Cape Town",
-      "platform": "PayPal",
-      "amount": "$3.00"
-    },
-    {
-      "product": "Eco Hoodie",
-      "location": "Durban",
-      "platform": "Yoco",
-      "amount": "R22.00"
-    }
-  ],
+  "clicks": [],
   "revenue": {
-    "paypal": 3.0,
-    "yoco": 22.0
+    "paypal": 0,
+    "yoco": 0
   }
 }
