@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+<script>const pass = prompt("Enter admin password:");if(pass!=='zwide2025'){document.write("Access Denied");throw new Error("Denied");}</script>
+<h1>Zwide Admin Dashboard</h1>
+<pre id="output"></pre>
+<script>
+fetch('zwide-db.json').then(r => r.json()).then(data => {
+document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+});
+</script>
+</body>
+</html>
